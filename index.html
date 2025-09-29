@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Портфолио переводчика</title>
+  <style>
+    /* Font and Reset */
+    @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap');
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Source Sans Pro', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: #f0f4f8;
+      color: #1e293b;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Header */
+    header {
+      background-color: #0f172a;
+      color: #f8fafc;
+      padding: 3rem 1rem 2rem;
+      text-align: center;
+      box-shadow: 0 4px 20px rgb(15 23 42 / 0.25);
+    }
+
+    header h1 {
+      font-weight: 600;
+      font-size: 2.5rem;
+      margin-bottom: 0.25rem;
+      letter-spacing: 0.05em;
+    }
+
+    header p1 {
+      font-weight: 400;
+      font-style: italic;
+      font-size: 1.2rem;
+      color: #94a3b8;
+      margin-top: 0;
+    }
+
+    /* Main Content */
+    main {
+      background-color: white;
+      max-width: 960px;
+      margin: 3rem auto 4rem;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgb(0 0 0 / 0.1);
+      overflow-x: auto;
+      padding: 2rem;
+    }
+
+    /* Table Styling */
+    table.MsoTableGrid {
+      width: 100%;
+      border-collapse: collapse;
+      border: none;
+      font-size: 15px;
+      color: #334155;
+      min-width: 600px;
+      margin-bottom: 2rem;
+    }
+
+    thead tr {
+      background-color: #0ea5e9;
+      color: #ffffff;
+      font-weight: 600;
+      text-align: left;
+    }
+
+    thead th {
+      padding: 1rem 1.25rem;
+      border-bottom: 3px solid #0284c7;
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+
+    tbody tr {
+      transition: background-color 0.3s ease;
+    }
+    tbody tr:hover {
+      background-color: #e0f2fe;
+    }
+
+    tbody td {
+      padding: 1rem 1.25rem;
+      border-top: 1px solid #e2e8f0;
+      vertical-align: top;
+      white-space: pre-wrap;
+    }
+
+    tbody tr:nth-child(even) td {
+      background-color: #f9fafb;
+    }
+
+    /* List of texts below table */
+    .reference-list {
+      font-size: 1rem;
+      color: #334155;
+      line-height: 1.5;
+      padding-left: 1.25rem;
+    }
+
+    .reference-list li {
+      margin-bottom: 0.75rem;
+    }
+
+    .reference-list a {
+      color: #0284c7;
+      text-decoration: none;
+    }
+
+    .reference-list a:hover,
+    .reference-list a:focus {
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #1e293b;
+      color: #cbd5e1;
+      padding: 1.75rem 1rem;
+      text-align: center;
+      font-size: 0.95rem;
+      box-shadow: inset 0 2px 6px rgb(255 255 255 / 0.1);
+      user-select: none;
+    }
+
+    footer strong {
+      color: #f1f5f9;
+      font-weight: 600;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    footer a {
+      color: #38bdf8;
+      text-decoration: none;
+      transition: color 0.25s ease;
+    }
+
+    footer a:hover,
+    footer a:focus {
+      text-decoration: underline;
+      color: #0c8599;
+    }
+
+    /* Responsive */
+    @media (max-width: 720px) {
+      main {
+        padding: 1rem;
+      }
+      table.MsoTableGrid {
+        min-width: unset;
+        font-size: 14px;
+      }
+      thead th, tbody td {
+        padding: 0.75rem 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      table.MsoTableGrid,
+      thead, tbody, th, td, tr {
+        display: block;
+      }
+      thead tr {
+        display: none;
+      }
+      tbody tr {
+        margin-bottom: 1.5rem;
+        background-color: #ecfdf5;
+        padding: 1rem;
+        border-radius: 8px;
+      }
+      tbody td {
+        padding: 0.5rem 0.5rem 0.5rem 40%;
+        position: relative;
+        border-top: none;
+        white-space: normal;
+      }
+      tbody td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 1.15rem;
+        top: 50%;
+        transform: translateY(-50%);
+        font-weight: 600;
+        color: #0284c7;
+        white-space: nowrap;
+      }
+    }
+  </style>
+  
+</head>
+<body>
+  <header>
+    <h1>Юлия Маркова</h1>
+    <p1>портфолио переводчика</p1>
+    <p>juliamarkova41@gmail.com</p>
+  </header>
+
+  <main>
+    <!-- Original table content with last row removed -->
+    <table class="MsoTableGrid" border="0" cellspacing="0" cellpadding="0" 
+      style="border-collapse:collapse;border:none;mso-yfti-tbllook:1184;mso-padding-alt:
+      0cm 5.4pt 0cm 5.4pt" aria-label="Примеры перевода">
+      <thead>
+        <tr>
+          <th scope="col">Перевод</th>
+          <th scope="col">Оригинальный текст</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="Перевод">
+            <p>I didn’t go to school for over a week. Grandma was treating me and spoiling me. She gave me berry jam and cowberry and baked me my favorite boiled bread rings. For days on end I sat on the bench, observing the outside world I had yet to reenter. Sometimes, out of sheer boredom, I spat on the window glass, and Grandma warned me that it would give me a toothache. But my teeth were completely fine; my legs, on the other hand, hurt without an end in sight, regardless of my spitting. A rustic window sealed for the winter is a piece of art, of sorts. Even before you enter the house, a window alone can tell you a good deal about the housekeeper, her character, and the everyday life of the hut’s habitants.</p>
+          </td>
+          <td data-label="Оригинальный текст">
+            <p>В школу я не ходил больше недели. Бабушка меня лечила и баловала, давала варенья, брусницы, настряпала отварных сушек, которые я очень любил. Целыми днями сидел я на лавке, глядел на улицу, куда мне ходу пока не было, от безделья принимался плевать на стекла, и бабушка стращала меня, мол, зубы заболят. Но ничего зубам не сделалось, а вот ноги, плюй не плюй, все болят, все болят. Деревенское окно, заделанное на зиму, — своего рода произведение искусства. По окну, еще не заходя в дом, можно определить, какая здесь живет хозяйка, что у нее за характер и каков обиход в избе.</p>
+          </td>
+        </tr>
+        <tr>
+          <td data-label="Перевод">
+            <p>Хроническая Ежедневная Головная Боль (ХЕГБ) продолжает быть одним из самых недопонятых и сложных для лечения видов головной боли, с которым может столкнуться лечащий врач. Согласно опросу о ХЕГБ, проведенному Всемирным Конгрессом Неврологов в 2001 году, 86% опрашиваемых терапевтов обозначили ХЕГБ как самый сложный для лечения вид головной боли. Кроме того, 90 % отметили, что они не в полной мере удовлетворены современными средствами лечения для ХЕГБ [1].</p>
+          </td>
+          <td data-label="Оригинальный текст">
+            <p>Chronic daily headache (CDH) continues to be one of the most misunderstood and hard to treat headache conditions that a health care provider encounters. According to the 2001 CDH Survey, undertaken at the World Congress of Neurology, 86% of responding physicians reported CDH as the most difficult headache to treat. Additionally, 90% reported they were not completely satisfied with current treatments for CDH [1]. </p>
+          </td>
+        </tr>
+        <tr>
+          <td data-label="Перевод">
+            <p>Согласно Американскому Обществу Розы, современные розы появились в 1867 году в результате развития первых чайно-гибридных роз. Эта разновидность известна своей привередливостью и потребностью в постоянном внимании. «Бытует мнение, что розы капризные, нуждаются в постоянной обработке и идеальных условиях. Во многом это следствие селекции: в погоне за совершенством у них отобрали качества, которые раньше делали розы неприхотливыми в саду», - сказал Майк Шуп, президент Общества Наследия Розы и автор «Императрицы Сада».
+</p>
+          </td>
+          <td data-label="Оригинальный текст">
+            <p>Modern roses emerged in 1867 with the development of the first hybrid tea, according to the American Rose Society. These varieties tend to have a reputation for being fussy, requiring constant attention. “The conception is that they’re not tough, that they require spraying, that you have to have the perfect culture. And a lot of that has been breeding; to breed these perfect flowers, but they bred out characteristics that made the rose easy to grow in our backyards,” said Mike Shoup, president of the Heritage Rose Foundation and author of “Empress of the Garden.”
+</p>
+          </td>
+        </tr>
+        <tr>
+          <td data-label="Перевод" style="text-indent: 2em;">
+            <p>Моя мать умерла, как только я родилась, поэтому всю мою жизнь ничего не стояло между мной и вечностью; за моей спиной всегда был мрачный, чёрный ветер. В начале жизни я не могла знать, что так получится - я узнала об этом только в середине жизни, как раз в то время, когда уже была немолода и осознала, что теперь у меня меньше того, что раньше я имела в избытке, и больше того, чего раньше у меня почти не было. И это осознание потери и приобретения заставило меня посмотреть как в прошлое, так и в будущее: в моём начале была эта женщина, чьё лицо я никогда не видела, но в моём конце не было ничего и никого; и не было ничего, что разделяло бы меня и тёмное пространство мира. Я чувствовала, что всю жизнь стою на краю обрыва, что моя утрата сделала меня беззащитной, что она сделала меня жёсткой и беспомощной; от этого знания меня переполняли чувства печали, стыда и жалости к себе.</p>
+          </td>
+          <td data-label="Оригинальный текст" style="text-indent: 2em;">
+            <p>My mother died at the moment I was born, and so for my whole life there was nothing standing between me and eternity; at my back was always a bleak, black wind. I could not have known at the beginning of my life that this would be so; I only came to know this in the middle of my life, just at the time when I was no longer young and realized that I had less of some of the things I used to have in abundance and more of some of the things I had scarcely had at all. And this realization of loss and gain made me look backward and forward: at my beginning was this woman whose face I had never seen, but at my end was nothing, no one; there was nothing between me and the black room of the world. I came to feel that for my whole life I had been standing on a precipice, that my loss had made me vulnerable, that it had made me hard and helpless; on knowing this, I became overwhelmed with sadness and shame and pity for myself.</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- List of texts as a separate section -->
+    <section aria-label="Список текстов и источников" style="margin-top: 1rem;">
+      <h2 style="color: #0f172a; font-weight: 600; font-size: 1.25rem; margin-bottom: 0.75rem;">Тексты:</h2>
+      <ol class="reference-list">
+        <li>Астафьев В. П. <em>Фотография, на которой меня нет</em>.</li>
+        <li>Hutchinson S. Chronic daily headache. Prim Care. 2004 Jun;31(2):353-67, vii. doi: 10.1016/j.pop.2004.02.007. PMID: 15172511.</li>
+        <li>
+          CNN. <em>Peggy Martin rose survived Hurricane Katrina</em>. — 27.08.2025 — URL: 
+          <a href="https://edition.cnn.com/2025/08/27/science/peggy-martin-rose-hurricane-katrina" target="_blank" rel="noopener noreferrer">
+            https://edition.cnn.com/2025/08/27/science/peggy-martin-rose-hurricane-katrina
+          </a>
+        </li>
+        <li>Kincaid J. <em>The Autobiography of My Mother</em>.</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer>
+    <strong>References & Testimonials</strong>
+    <p>
+      "Jane's translation was exceptionally accurate and beautifully conveyed the original text." – Client A<br />
+      "Highly recommended professional translator with excellent communication skills." – Client B<br />
+      <a href="mailto:jane.doe@example.com" aria-label="Contact Jane Doe by email">Contact Me</a>
+    </p>
+  </footer>
+</body>
+</html>
